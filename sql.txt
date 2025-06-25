@@ -1,0 +1,72 @@
+create database DATASCIENCE_AI;
+
+create table students(
+    
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR (100) NOT NULL,
+    email VARCHAR (100) NOT NULL UNIQUE,
+    class INT,
+    age INT,
+
+);
+
+create table marks(
+    
+    marks_id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT FOREIGN KEY REFERENCES students(student_id),
+    subject VARCHAR(50) NOT NULL,
+    marks INT,
+
+);
+
+
+select * from table students;
+
+
+Inserting values
+
+INSERT INTO students (
+    VALUES ('1','Aryam','aryambajracharya00@gmail.com','20')
+);
+
+
+Create database db_test;
+
+Create table employees (
+    employee_id int auto_increment primary Key,
+    name varchar(50) not null,
+    address varchar(50) not null 
+);
+
+Create table employees_profiles(
+    position varchar(20) not null,
+    employee_id INT FOREIGN KEY REFERENCES employees(employee_id),
+    role varchar(20) not null,
+    salary int (10) not null
+);
+
+Create table summary (
+    description_id int primary key,
+    description varchar(255) not null
+);
+
+INSERT INTO employees 
+(employee_id, name , address)
+VALUES 
+('1','Aryam','AKlohiti'),
+('2','Aavash','hiti')
+('3','Bibek','iti')
+;
+
+INSERT INTO employees_profiles 
+(position,employee_id, role , salary)
+VALUES 
+('Manager','1','sr','50000'),
+('Developer','2','jr','50000')
+("Ui/UX','3','jr','200000')
+;
+
+
+
+
+
