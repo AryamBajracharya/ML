@@ -3,6 +3,5 @@ numpy
 pandas
 - pandas basic data frame understandings loc, iloc, data structure
 csv
-- new folder and file
-missing_values_and_handling_outliers
-- fillna, imputation, boxplot, duplicate, dropna, np.nan
+sqlite3
+- sqlite3 basic understandings, how to connect to database, how to create table, how to insert data, how to fetch data, how to commit changes.
